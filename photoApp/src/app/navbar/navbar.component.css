@@ -1,0 +1,34 @@
+/* .navbar{
+    display:flex;
+    background-color: blanchedalmond;
+    position: fixed;
+    width: 100%;
+}
+
+.site-name{
+    padding: 5px 50px;
+    font-size: large;
+    color: brown;
+}
+
+.site-menu{
+    padding: 10px 30px;
+    margin-left: 100px;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: darkolivegreen;
+    margin: 0px 10px;
+    padding: 0px 30px;
+}  */
+
+.navbar{
+    background-color: bisque;
+}
+
+.nav-link{
+    margin-left: 20px ;
+    margin-right: 20px ;
+}

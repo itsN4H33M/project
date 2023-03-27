@@ -1,0 +1,35 @@
+<div class="outer">  
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+        <div class="panel border">
+          <div class="panel-heading">
+            <h2 class="pt-3" style="color: brown;"><b>Login</b></h2>
+          </div>
+          <div class="panel-body pt-0 p-3">
+            <form [formGroup]="loginForm " (ngSubmit)="login()">
+              <div class="form-group pt-3">
+                <div class="input-field">
+                  <span class="fa fa-envelope p-2"></span>
+                  <input type="text" placeholder="Email" formControlName="email">
+                </div>
+              </div>
+              <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" class="text-danger">*Email is required</small>
+              <div class="form-group pt-3">
+                <div class="input-field">
+                  <span class="fa fa-lock p-2"></span>
+                  <input type="password" placeholder="Password" formControlName="password">
+                </div>
+              </div>
+              <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger">*Password is required</small>
+              <button [disabled]="loginForm.invalid"  type="submit" class="btn btn-default">Login</button>
+              <div class="text-center mt-3 text-muted">Don't have an account?
+                <a id="forget" routerLink="../signup">Sign up</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   

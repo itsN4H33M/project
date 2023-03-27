@@ -1,0 +1,55 @@
+<div class="outer">  
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+          <div class="panel border">
+            <div class="panel-heading">
+              <h2 class="pt-3" style="color: brown;"><b>Sign Up</b></h2>
+            </div>
+            <div class="panel-body pt-0 p-3">
+              <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                <div class="form-group pt-3">
+                  <div class="input-field">
+                    <span class="fa fa-user p-2"></span>
+                    <input type="text" placeholder="First Name" formControlName="fname">
+                  </div>
+                </div>
+                <small *ngIf="signupForm.controls['fname'].dirty && signupForm.hasError('required','fname')" class="text-danger">*First name is required</small>
+                <div class="form-group pt-3">
+                  <div class="input-field">
+                    <span class="fa fa-user p-2"></span>
+                    <input type="text" placeholder="Last Name" formControlName="lname">
+                  </div>
+                </div>
+                <div class="form-group pt-3">
+                    <div class="input-field">
+                      <span class="fa fa-envelope p-2"></span>
+                      <input type="email" placeholder="Email" formControlName="email">
+                    </div>
+                  </div>
+                  <small *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')" class="text-danger">*Email is required</small>
+                  <div class="form-group pt-3">
+                    <div class="input-field">
+                      <span class="fa fa-mobile fa-lg p-2"></span>
+                      <input type="text" placeholder="Mobile Number" formControlName="mnumber">
+                    </div>
+                  </div>
+                  <small *ngIf="signupForm.controls['mnumber'].dirty && signupForm.hasError('required','mnumber')" class="text-danger">*Mobile number is required</small>
+                  <div class="form-group pt-3">
+                    <div class="input-field">
+                      <span class="fa fa-lock p-2"></span>
+                      <input type="password" placeholder="Password" formControlName="password">
+                    </div>
+                  </div>
+                  <small *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')" class="text-danger">*Password is required</small>
+                <button [disabled]="signupForm.invalid" type="submit"  class="btn btn-default">Sign Up</button>
+                <div class="text-center mt-3 text-muted">Already have an account?
+                  <a id="forget" routerLink="../login">Log In</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   

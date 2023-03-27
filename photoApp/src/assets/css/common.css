@@ -1,0 +1,43 @@
+.outer{
+    height: 100vh;
+    background: linear-gradient(#a1c4fd,#c2e9fb);
+}
+.panel-heading{
+    text-align: center;
+}
+
+.btn-default{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #a1c4fd;
+    border-radius: 2rem;
+}
+
+#forget{
+    text-decoration: none;
+}
+
+.panel{
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 10px;
+    margin-top: 100px;
+    background-color: azure;
+}
+
+.input-field{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color:cadetblue;
+    border: 1px solid;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email']{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: azure;
+}
